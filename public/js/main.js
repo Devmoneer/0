@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const codeInput = document.getElementById('code-input');
     const submitBtn = document.getElementById('submit-btn');
     const messageEl = document.getElementById('message');
-    const validCodes = ["123456", "654321", "000000",
-        "12"
+    const validCodes = [
+        "12,90@#$%-=00@qQMrT"
     ]; 
     const maxAttempts = 3;
     const cooldownTime = 10000; // 10 seconds in milliseconds
