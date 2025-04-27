@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const codeInput = document.getElementById('code-input');
     const submitBtn = document.getElementById('submit-btn');
     const messageEl = document.getElementById('message');
-    const validCodes = [
-        "12,90@#$%-=00@qQMrT"
-    ]; 
+    const validCode = "12"; 
     const maxAttempts = 3;
-    const cooldownTime = 10000; // 10 seconds in milliseconds
+    const cooldownTime = 10000; 
 
     let attempts = parseInt(localStorage.getItem('attempts') || 0);
     let lastAttemptTime = parseInt(localStorage.getItem('lastAttemptTime') || 0);
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.addEventListener('click', function() {
         if (!checkAttempts()) return;
 
-        if (validCodes.includes(codeInput.value)) {
+        if (codeInput.value === validCode) { 
             showMessage('بسەرکەفتیانە کۆد هاتە چالاکرن', false);
             localStorage.setItem('activated', 'true');
             localStorage.removeItem('attempts');
@@ -79,6 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
-    setInterval(resetAttempts, 10000);
+    setInterval(resetAttempts, 1000);
 });
