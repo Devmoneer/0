@@ -3,24 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> AI - powered by Moneer</title>
+    <title>AI - powered by Moneer</title>
     <link rel="stylesheet" href="css/home.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>زیرەکیا دەستکرد</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="home.html" class="active">سەرەکی</a></li>
+                    <li><a href="zanyari.html">زانیاری</a></li>
+                    <li><a href="#" class="premium-btn">پرێمیۆم</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <!-- Mobile menu container -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="home.html" class="active">سەرەکی</a></li>
+                <li><a href="zanyari.html">زانیاری</a></li>
+                <li><a href="#" class="premium-btn">پرێمیۆم</a></li>
+            </ul>
+        </div>
+    </header>
 
+    <footer class="footer">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>چاتی زیرەکیا دەستکرد</h3>
+                <button id="newChatBtn" class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                     ژێبرن
+                </button>
+            </div>
+            <div class="chat-box" id="chatBox">
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="پرسیارا خۆ بنڤیسە..." />
+                <button id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
 
-
-
-
-
-
-
-
-
-
-    
     <script src="js/loading.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>

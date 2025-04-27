@@ -413,24 +413,3 @@ body {
 }
 
 
-.emoji-dlk {
-    font-size: 24px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    position: absolute;
-    top: 75%;        
-    left: 50%;    
-    transform: translate(-50%, -50%); 
-    width: 200px;    
-    height: 200px;
-}
-
-
-.emoji-dlk img {
-    max-width: 100%;
-    height: auto;
-}
