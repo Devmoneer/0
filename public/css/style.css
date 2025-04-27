@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEEEEE;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.text-header {
+    width: 100%;
+    text-align: center;
+}
+
+.a {
+    font-size: clamp(18px, 5vw, 22px);
+    color: #0A2647;
+    margin-bottom: 15px;
+    -webkit-user-select: none;
+}
+
+.b {
+    font-size: clamp(12px, 3.5vw, 14px);
+    font-weight: 700;
+    margin-bottom: 8px;
+    -webkit-user-select: none;
+}
+
+.price-display {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.c, .d {
+    font-size: clamp(12px, 3.5vw, 14px);
+    font-weight: 600;
+    -webkit-user-select: none;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.rtl-input {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    text-align: center;
+    direction: rtl;
+    font-size: 16px;
+}
+
+.rtl-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .rtl-input {
+        width: 100%;
+        padding: 10px 12px;
+    }
+}
+
+
+#submit-btn {
+    padding: 12px 20px;
+    background-color: #0A2647;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-btn:hover {
+    background-color: #144272;
+}
+
+#submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.message {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 20px;
+    position: relative;
+}
+
+.error {
+    color: #d32f2f;
+}
+
+.success {
+    color: #388e3c;
+}
+
+
+.pay {
+    font-family: 'ibm plex sans arabic';
+    font-weight: bolder;
+    font-size: 20px;
+}

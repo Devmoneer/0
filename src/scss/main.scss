@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #f5f5f5;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    line-height: 1.6;
+    
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #f3f4f6, #fff);
+        z-index: -1;
+    }
+}
