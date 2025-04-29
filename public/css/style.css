@@ -20,12 +20,21 @@
     position: relative;
 }
 
-@supports (padding-top: env(safe-area-inset-top)) {
-    .header {
-        padding-top: calc(1rem + env(safe-area-inset-top));
-        padding-left: calc(2rem + env(safe-area-inset-left));
-        padding-right: calc(2rem + env(safe-area-inset-right));
+
+@supports (-webkit-touch-callout: none;) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        background-color: #f8f8f8;
     }
+
+    .header {
+        padding-top: env(safe-area-inset-top);
+        background-color: #f8f8f8;
+    }
+}
+
+meta[name=theme-color] {
+    content: #f8f8f8;
 }
 
 .logo-text {
