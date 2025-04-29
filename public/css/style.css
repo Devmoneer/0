@@ -172,21 +172,6 @@ meta[name=theme-color] {
 }
 
 
-.btn-back {
-    position: fixed;
-    left: 50%;
-    bottom: 100px;
-    transform: translateX(-50%);
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-family: 'noto sans', sans-serif;
-
-}
 
 .text-l1g {
     color: #60B5FF;
@@ -218,6 +203,173 @@ meta[name=theme-color] {
 }
 
 
+.text-l1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'noto sans', sans-serif;
+}
+
+.text-l2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'noto sans arabic', sans-serif;
+}
+
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 20px; 
+}
+
+.arrow-down {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    animation: bounceDown 2s infinite;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+
+.emoji-1x {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    padding: 1.5rem 1rem;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+    display: flex;
+    animation: slideDown 1.5s ease-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header.menu-open {
+    box-shadow: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.menu-link {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #053B50;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.menu-link:hover {
+    background-color: #e6f2ff;
+    color: #60B5FF;
+}
+
+.mobile-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    padding: 0.5rem 0;
+}
+
+.mobile-social-icon {
+    color: #053B50;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.mobile-social-icon:hover {
+    color: #60B5FF;
+    transform: scale(1.15);
+}
+
+/* Update the burger menu to be more visible */
+.burger {
+    z-index: 1100;
+}
+
+/* Update the header padding when menu is open */
+.header.menu-open {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.social-icon {
+    color: #053B50;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+
 @media (max-width: 768px) {
     body {
         background-color: rgb(177, 177, 177);
@@ -230,16 +382,16 @@ meta[name=theme-color] {
     }
     
     .nav-bar {
-        position: static;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
+        position: relative;
+        left: 0;
+        top: 0px;
+        flex-direction: row;
         text-align: center;
         transition: 0.3s;
         padding: 1rem 0;
         margin-right: 0;
-        width: 10%;
-        height: 10%;
+        width: auto;
+        height: auto;
     }
     
     .nav-bar.active {
@@ -346,4 +498,35 @@ meta[name=theme-color] {
     .click-box p {
         font-size: 1.2rem;
     }
+}
+
+
+@media (max-width: 400px) {
+    .mobile-menu {
+        top: 60px;
+        padding: 1rem 0.5rem;
+    }
+    
+    .menu-link {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .mobile-social-icons {
+        gap: 1.5rem;
+    }
+    
+    .mobile-social-icon {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+.bestapp, .curses, .About-me {
+    text-decoration: none;
+    color: #333;
+    display: flow-root;
+    margin-bottom: 25px;
+
 }
