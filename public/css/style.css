@@ -118,6 +118,7 @@ meta[name=theme-color] {
     cursor: pointer;
     transition: all 0.3s ease;
     top: -20px;
+    margin-bottom: -40px;
 }
 
 
@@ -128,7 +129,37 @@ meta[name=theme-color] {
 }
 
 
+.a {
+    text-decoration: none;
+}
 
+.university {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.ph {
+    font-family: 'noto sans', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.dpu {
+    width: 90px;
+    height: 60px;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
 
 @media (max-width: 768px) {
     body {
