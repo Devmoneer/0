@@ -21,7 +21,7 @@
 }
 
 
-@supports (-webkit-touch-callout: none;) {
+@supports (-webkit-touch-callout: none;) { 
     body {
         padding-top: env(safe-area-inset-top);
         background-color: #f8f8f8;
@@ -31,6 +31,17 @@
         padding-top: env(safe-area-inset-top);
         background-color: #f8f8f8;
     }
+
+    .click-box-container {
+        padding-top: calc(env(safe-area-inset-top) + 1rem);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .click-box {
+        margin-top: 1rem;
+        height: 250px;
+    }
+
 }
 
 meta[name=theme-color] {
@@ -71,8 +82,9 @@ meta[name=theme-color] {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    pointer-events: none;
+    pointer-events: auto;
     -webkit-user-select: none;
+    cursor: pointer;
 }
 
 .profile-images img {
@@ -82,6 +94,38 @@ meta[name=theme-color] {
 }
 
 
+.click-box-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+}
+
+.click-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    top: -20px;
+}
+
+
+.click-box p {
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'noto sans', sans-serif;
+}
 
 
 
@@ -201,4 +245,17 @@ meta[name=theme-color] {
         top: 21px;
         left: 4px;
       }
+
+}
+
+
+@media (max-width: 500px) {
+    .click-box {
+        height: 20px;
+        padding: 1.5rem;
+    }
+    
+    .click-box p {
+        font-size: 1.2rem;
+    }
 }
