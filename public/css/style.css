@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
 
 
 
@@ -160,6 +161,62 @@ meta[name=theme-color] {
     -webkit-user-select: none;
     pointer-events: none;
 }
+
+.icons {
+    display: flex;
+    gap: 55px;
+    margin-top: 180px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.btn-back {
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'noto sans', sans-serif;
+
+}
+
+.text-l1g {
+    color: #60B5FF;
+}
+
+.text-l2g {
+    color: #053B50;
+}
+
+.kurdish-text {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+
+.xyz {
+    font-family: 'noto sans arabic', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.xyz-q {
+    font-size: 100px;
+    -webkit-user-select: none;
+    text-align: center;
+    margin-top: 100px;
+}
+
 
 @media (max-width: 768px) {
     body {
