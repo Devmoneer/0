@@ -118,7 +118,7 @@ meta[name=theme-color] {
     text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
-    top: -60px;
+    top: -20px;
     margin-bottom: -40px;
 }
 
@@ -506,6 +506,7 @@ meta[name=theme-color] {
     padding: 0 1rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 2px;
 }
 
 
@@ -525,8 +526,7 @@ meta[name=theme-color] {
     text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
-    top: -60px;
-    margin-bottom: -40px;
+    top: -20px;
     text-decoration: none;
     color: #333;
     margin-top: 14px;
@@ -572,6 +572,41 @@ body {
 .footer {
     margin-top: auto;
 }
+
+
+.ai-img {
+    width: 190px;
+    height: 190px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.img-ai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #102E50,#60B5FF);
+    max-width: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    margin-top: 100px;
+    border: #FA812F 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
