@@ -24,10 +24,30 @@
         align-items: center;
         height: 50px;
         border-bottom: 5px solid #FE7743; 
+        background-size: 200% 200%;
+        animation: gradientBorder 5s ease infinite;
+    }
+
+    @keyframes gradientBorder {
+        0% {
+            border-bottom-color: #FE7743;
+        }
+        25% {
+            border-bottom-color: #4CAF50;
+        }
+        50% {
+            border-bottom-color: #2196F3;
+        }
+        75% {
+            border-bottom-color: #9C27B0;
+        }
+        100% {
+            border-bottom-color: #FE7743;
+        }
     }
 
     .header:hover {
-        border-bottom: 5px solid #000000;
+        animation-play-state: paused;
 
     }
 
@@ -57,29 +77,33 @@
 
     .burger {
         position: relative;
-        width: 30px; 
-        height: 20px; 
-        background: transparent;
+        width: 30px;
+        height: 20px;
         cursor: pointer;
         display: block;
-        margin-left: auto; 
+        z-index: 1001;
     }
       
     .burger input {
-        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1002;
     }
       
     .burger span {
         display: block;
-        position: absolute;
-        height: 3px; 
-        width: 100%;
-        background: rgb(255, 255, 255);
-        border-radius: 9px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
     }
       
     .burger span:nth-of-type(1) {
@@ -126,21 +150,21 @@
 }
 
 .memoji-1 {
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
     position: relative;
-    left: 12px;
-    top: 10px;
+    left: 30px;
+    top: 20px;
     pointer-events: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
 .memoji-2 {
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 90px;
     position: relative;
-    left: -12px;
+    left: -10px;
     top: 10px;
     pointer-events: none;
     -webkit-user-select: none;
@@ -267,5 +291,72 @@
     border: 2px solid #BE3D2A;
 }
 
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 60px);
+    background: linear-gradient(to right, #273F4F, #000000);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    border-right: 3px solid #FE7743;
+    border-top: 3px solid #FE7743;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #EFEEEA;
+    text-decoration: none;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 18px;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: rgba(254, 119, 67, 0.2);
+    padding-right: 25px;
+}
+
+.menu li a span {
+    font-size: 24px;
+    color: #FE7743;
+
+}
+
+.copyright-footer {
+    background: none;
+    font-family: 'noto kufi arabic', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.material-symbols-outlined-box-icon {
+    color: #FE7743;
+}
+
     
 }
+
+
