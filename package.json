@@ -11,7 +11,9 @@
   "keywords": [],
   "author": "Your Name",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "web-project": "file:"
+  },
   "devDependencies": {
     "live-server": "^1.2.1"
   }
